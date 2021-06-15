@@ -14,6 +14,9 @@ public class CollectorService {
 		try {
 		    number1 = Long.parseLong(first);
 		    number2 = Long.parseLong(second);
+		    if(number1 < 0 || number2 < 0) {
+		    	throw new RuntimeException();
+		    }
 
 		} catch (NumberFormatException ex) {
 		    System.out.println("Not a valid number!");
@@ -21,6 +24,12 @@ public class CollectorService {
 		}
 		
 		return number1 + number2;
+	}
+	
+	@RequestMapping("/collectfloat/first/{first}/second/{second}")
+	public float collect(@PathVariable float first, @PathVariable float second) {
+		
+		return first + second;
 	}
 	
 	@RequestMapping("/collectstring/first/{first}/second/{second}")
