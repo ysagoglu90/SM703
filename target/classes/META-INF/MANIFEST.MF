@@ -1,10 +1,10 @@
 Manifest-Version: 1.0
 Built-By: yigitsagoglu
 Build-Jdk: 15.0.2
-Implementation-Title: microservices-springboot
+Implementation-Title: sm703-e253306
 Implementation-Version: 0.0.1-SNAPSHOT
-Implementation-Vendor-Id: com.limeguru.tutorial
+Implementation-Vendor-Id: com.metu
 Implementation-URL: https://projects.spring.io/spring-boot/#/spring-boot
- -starter-parent/microservices-springboot
+ -starter-parent/sm703-e253306
 Created-By: Maven Integration for Eclipse
 
