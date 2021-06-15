@@ -8,8 +8,19 @@ import org.springframework.web.bind.annotation.RestController;
 public class CollectorService {
 	
 	@RequestMapping("/collect/first/{first}/second/{second}")
-	public long collect(@PathVariable long first, @PathVariable long second) {
-		return first + second;
+	public long collect(@PathVariable String first, @PathVariable String second) {
+		long number1 = 0l;
+		long number2 = 0l;
+		try {
+		    number1 = Long.parseLong(first);
+		    number2 = Long.parseLong(second);
+
+		} catch (NumberFormatException ex) {
+		    System.out.println("Not a valid number!");
+		    throw new NumberFormatException();
+		}
+		
+		return number1 + number2;
 	}
 
 }
