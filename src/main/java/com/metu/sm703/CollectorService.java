@@ -25,7 +25,7 @@ public class CollectorService {
 	
 	@RequestMapping("/collectfloat/first/{first}/second/{second}")
 	public float collect(@PathVariable float first, @PathVariable float second) {
-		
+		 
 		return first + second;
 	}
 	
