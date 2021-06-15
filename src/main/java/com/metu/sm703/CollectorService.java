@@ -14,6 +14,9 @@ public class CollectorService {
 		try {
 		    number1 = Long.parseLong(first);
 		    number2 = Long.parseLong(second);
+		    if(number1 < 0 || number2 < 0) {
+		    	throw new RuntimeException();
+		    }
 
 		} catch (NumberFormatException ex) {
 		    System.out.println("Not a valid number!");
