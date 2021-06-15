@@ -12,10 +12,10 @@
 
      steps:
      - uses: docker://sonarsource/sonar-scanner-cli:latest
+       run: sonar-scanner -Dproject.settings=../sonar-project.properties
        env:
          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-         SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
      - uses: actions/checkout@v2
      - name: Deployment
        uses: AkhileshNS/heroku-deploy@v3.8.8
