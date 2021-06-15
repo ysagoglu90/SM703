@@ -11,7 +11,7 @@
      runs-on: ubuntu-latest
 
      steps:
-     - uses: docker://sonarsource/sonar-scanner-cli:latest
+     - name: SonarCloud Scan
        run: sonar-scanner -Dproject.settings=../sonar-project.properties
        env:
          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
