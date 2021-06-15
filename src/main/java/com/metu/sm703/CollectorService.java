@@ -26,6 +26,12 @@ public class CollectorService {
 		return number1 + number2;
 	}
 	
+	@RequestMapping("/collectfloat/first/{first}/second/{second}")
+	public float collect(@PathVariable float first, @PathVariable float second) {
+		
+		return first + second;
+	}
+	
 	@RequestMapping("/collectstring/first/{first}/second/{second}")
 	public String collectstring(@PathVariable String first, @PathVariable String second) {
 		
