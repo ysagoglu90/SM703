@@ -22,5 +22,10 @@ public class CollectorService {
 		
 		return number1 + number2;
 	}
-
+	
+	@RequestMapping("/collectstring/first/{first}/second/{second}")
+	public String collectstring(@PathVariable String first, @PathVariable String second) {
+		
+		return first + " " + second;
+	}
 }
