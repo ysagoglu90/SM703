@@ -17,11 +17,11 @@
          path: ~/.m2
          key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
          restore-keys: ${{ runner.os }}-m2
-     - name: Analyze with SonarCloud
-       uses: SonarSource/sonarcloud-github-action@v1.6
+     - name: Build and analyze
        env:
-         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+       run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar
      - uses: actions/checkout@v2
      - name: Deployment
        uses: AkhileshNS/heroku-deploy@v3.8.8
