@@ -10,7 +10,7 @@ public class SubtractService {
 	@RequestMapping("/subtract/first/{first}/second/{second}")
 	public long subtract(@PathVariable int first, @PathVariable int second) {
 		
-		
+		first = 0;
 		return first -  second;
 	}
 	
